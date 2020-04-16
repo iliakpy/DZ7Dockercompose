@@ -6,11 +6,11 @@ services:
         build_boxfuse:
                 volumes:
                         - boxfuse:/var/boxfuse/target/
-                build: build_service/
+                build: build/
         prod_boxfuse:
                 volumes:
                         - boxfuse:/opt/tomcat/webapps/hello
-                build: prod_service/
+                build: prod/
                 command: "/opt/tomcat/bin/catalina.sh run"
                 ports:
                         - "8080:8080"
